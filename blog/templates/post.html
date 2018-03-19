@@ -1,0 +1,9 @@
+{% extends 'base.html' %} 
+{% block title %} MySite/{{ post.title }} {% endblock %}
+{% block content %}
+    <a href="/">Back to Page</a>
+    <h2>{{ post.title }}</h2>
+    <div>
+        {{post.content}}
+    </div>
+{% endblock %}
