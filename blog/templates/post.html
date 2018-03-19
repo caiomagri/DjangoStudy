@@ -1,12 +1,18 @@
-{% extends 'base.html' %} 
-{% block title %} MySite/{{ post.title }} {% endblock %}
-{% block content %}
-    <a href="/">Back to Page</a>
-    <h2>{{ post.title }}</h2>
-    <div>
-        {{post.content}}
+{% extends 'base.html' %} {% block title %} MySite/{{ post.title }} {% endblock %} {% block content %}
+<div class="container">
+    <div class="media">
+        <a href="/">Back to Page</a>
+        <h4 style="text-align:center">{{ post.title }}</h4>
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="{{ post.image.url }}" alt="..." style="width: 100px;height:100px">
+            </a>
+        </div>
+        <div class="media-body">
+            <div style="text-align: justify;">
+                {{post.content}}
+            </div>
+        </div>
     </div>
-    <div class="col">
-    <img src="{{ post.image.url }}" alt="">
-    </div>
+</div>
 {% endblock %}

@@ -2,11 +2,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="thin center">Recent Posts</h1>
+            <h1 class="thin center" style="text-align:center">Recent Posts</h1>
+            <hr/>
         </div>
-
         <div class="row">
-            {% for post in posts %}
+            {% for post in posts %} 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="{{ post.image.url}}" alt="..." style="height:100px">
